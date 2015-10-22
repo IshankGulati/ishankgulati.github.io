@@ -6,10 +6,9 @@ relative_permalinks: true
 
 # Setup
 title:               Ishank Gulati
-tagline:             
-url:                 http://getpoole.com
+tagline:             'Robotics, Machine learning, Computer Vision'         
 paginate:            1
-baseurl:             ""
+baseurl:             http://ishank08.github.io/
 
 pages_list:       
   About: '/about'
@@ -25,11 +24,11 @@ sass:
 
 # About/contact
 author:
-  name:              Mark Otto
+  name:              Ishank Gulati
   url:               https://twitter.com/mdo
-  email:             markdotto@gmail.com
+  email:             gulati.ishank@gmail.com
 
 # Custom vars
 version:             2.0.0
 github:
-  repo:              https://github.com/ishank08
+  repo:              https://github.com/ishank08/ishank08.github.io
