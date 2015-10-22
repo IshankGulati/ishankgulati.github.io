@@ -5,12 +5,17 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Poole
-tagline:             The Jekyll Butler
+title:               Ishank Gulati
+tagline:             
 url:                 http://getpoole.com
 paginate:            1
 baseurl:             ""
 
+pages_list:       
+  About: '/about'
+  Archive: '/archive'
+  Feed: '/atom.xml'
+  
 # Assets
 #
 # We specify the directory for Jekyll so we can use @imports.
@@ -27,4 +32,4 @@ author:
 # Custom vars
 version:             2.0.0
 github:
-  repo:              https://github.com/poole/poole
+  repo:              https://github.com/ishank08
