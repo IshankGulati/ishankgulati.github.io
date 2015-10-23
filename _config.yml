@@ -6,7 +6,7 @@ relative_permalinks: true
 
 # Setup
 title:               Ishank Gulati
-tagline:                     
+#tagline:                     
 paginate:            1
 baseurl:             http://ishankgulati.github.io/
 
