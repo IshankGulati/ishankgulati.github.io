@@ -15,13 +15,13 @@ title: Home
 
     <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
 	
-		<div class="post-content-truncate">
-		  {% if post.content contains "<!-- more -->" %}
-			{{ post.content | split:"<!-- more -->" | first % }}
-		  {% else %}
-			{{ post.content | strip_html | truncatewords:100 }}
-		  {% endif %}
-		</div>
+		
+    {% if post.content contains "<!-- more -->" %}
+	  {{ post.content | split:"<!-- more -->" | first % }}
+    {% else %}
+	  {{ post.content | strip_html | truncatewords:100 }}
+    {% endif %}
+		
 		
     {{ post.content }}
   </article>
