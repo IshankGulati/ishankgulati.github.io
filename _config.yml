@@ -6,10 +6,12 @@ relative_permalinks: true
 
 # Setup
 title:               Ishank Gulati
-#tagline:                     
+tagline:             'Code the way to success'        
 paginate:            5
 paginate_path:       "blog/page:num"
 baseurl:             http://ishankgulati.github.io/
+highlighter:         pygments
+excerpt_separator:   <!–break–>
 
 pages_list:       
   About: '/about'
