@@ -11,7 +11,6 @@ paginate:            5
 paginate_path:       "blog/page:num"
 baseurl:             http://ishankgulati.github.io/
 highlighter:         pygments
-excerpt_separator:   <!–break–>
 
 pages_list:       
   About: '/about'
