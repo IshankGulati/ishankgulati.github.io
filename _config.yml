@@ -6,14 +6,14 @@ relative_permalinks: true
 
 # Setup
 title:               Ishank Gulati
-tagline:             'Robotics, Machine learning, Computer Vision'         
+tagline:                     
 paginate:            1
-baseurl:             http://ishank08.github.io/
+baseurl:             http://ishankgulati.github.io/
 
 pages_list:       
   About: '/about'
   Archive: '/archive'
-  Feed: '/atom.xml'
+  #Feed: '/atom.xml'
   
 # Assets
 #
@@ -25,10 +25,10 @@ sass:
 # About/contact
 author:
   name:              Ishank Gulati
-  url:               https://twitter.com/mdo
+  url:               
   email:             gulati.ishank@gmail.com
 
 # Custom vars
 version:             2.0.0
 github:
-  repo:              https://github.com/ishank08/ishank08.github.io
+  repo:              https://github.com/ishank08/IshankGulati.github.io
