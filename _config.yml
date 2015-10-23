@@ -7,7 +7,8 @@ relative_permalinks: true
 # Setup
 title:               Ishank Gulati
 #tagline:                     
-paginate:            1
+paginate:            5
+paginate_path:       "blog/page:num"
 baseurl:             http://ishankgulati.github.io/
 
 pages_list:       
