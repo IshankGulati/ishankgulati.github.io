@@ -19,10 +19,10 @@ title: Home
 		
 		{% if post.content contains "<!-- more -->" %}
 		  {{ post.content | split:"<!-- more -->" | first % }}
-		  <a href="{{ post.url }}#disqus_thread">Read More</a>
+		  <a href="{{ post.url }}">Read More</a>
 		{% else %}
 		  {{ post.content | strip_html | truncatewords:100 }}
-		  <a href="{{ post.url }}#disqus_thread">Read More</a>
+		  <a href="{{ post.url }}">Read More</a>
 		{% endif %}
 		
   </article>
