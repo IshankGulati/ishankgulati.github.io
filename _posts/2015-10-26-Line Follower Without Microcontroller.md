@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Line Follower without Microcontroller implementing Pulse Width Modulation
+title: Line Follower Without Microcontroller
 comments: True
 ---
 
@@ -10,32 +10,32 @@ A line follower is an autonomous robot which follows either black line in white 
 
 Following are the components required to build this line follower
 
-1.IR sensors(2)
-2.Resistors: 220(2), 1K(2), 15K(1), 33K(1), 47K(2), and 100K(1)
-3.Variable Resistors: 100K(2)
-4.Capacitors: 47uF/16v(1), 0.33uF(1), 0.1uF(6)
-5.LM324 Operational Amplifier IC
-6.L293D Motor Driver IC
-7.7805 Voltage Regulator IC
-8.DC Motors(2)
-9.PCB
-10.6V Dynamite battery
-11.Chassis cut of plywood
-12.Soldering iron with soldering wire and flux
-13.Wheels(2)
-14.Caster Wheel(1)
-15.L clamp(2)
+1. IR sensors(2)
+2. Resistors: 220(2), 1K(2), 15K(1), 33K(1), 47K(2), and 100K(1)
+3. Variable Resistors: 100K(2)
+4. Capacitors: 47uF/16v(1), 0.33uF(1), 0.1uF(6)
+5. LM324 Operational Amplifier IC(1)
+6. L293D Motor Driver IC(1)
+7. 7805 Voltage Regulator IC(1)
+8. DC Motors(2)
+9. PCB
+10. 6V Dynamite battery(1)
+11. Chassis cut of plywood
+12. Soldering iron with soldering wire and flux
+13. Wheels(2)
+14. Caster Wheel(1)
+15. L clamp(2)
 
 We will divide the robot in different building blocks, build them piece by piece and then tie them up together.
 
-#Sensor Board
-=============
+##Sensor Board
+---
 
 An IR sensor is basically a device which consists of a pair of IR LED and photodiode. The IR LED emits IR radiation and the output of the sensor is dictated by the intensity of reception of the radiation by the photodiode. This is a part of the Robot which would actually interact and take input from the surroundings. Use the following schematic for implementation:
 
-<img src="https://github.com/IshankGulati/ishankgulati.github.io/tree/master/assets/sensor-ckt.png" alt="Sensor circuit" style="width:400px;height:300px;">
+<img src="https://github.com/IshankGulati/ishankgulati.github.io/tree/master/assets/sensor-ckt.png" alt="Sensor circuit" style="width:400px;height:300px;"/>
 
-<img src="https://github.com/IshankGulati/ishankgulati.github.io/tree/master/assets/sensor_module.jpg" alt="Sensor module" style="width:400px;height:300px;">
+<img src="https://github.com/IshankGulati/ishankgulati.github.io/tree/master/assets/sensor_module.jpg" alt="Sensor module" style="width:400px;height:300px;"/>
 
 This is the part of the robot which actually differentiates between white and black line. The IR LED emits IR radiation, which in normal state gets reflected back to the module from the white surface around the black line, which gets incident on the photodiode. But, as soon as the IR radiation falls on the black line, the IR radiation gets absorbed completely by the black color, and hence there is no reflection of the IR radiation going back to the sensor module. 
 
@@ -44,8 +44,8 @@ Alternatively LDR sensors can also be used instead of IR sensors.
 
 **Tip:** Since IR LED emits light in the frequency range of Infra-Red, it isn't visible to the Human eye. Just to make sure that the circuit is correctly soldered, power up the board and observe the LEDs on your cell phone screen using the camera. If they are working correctly you will see them glow.
 
-#The Brain
-==========
+##The Brain
+---
 
 Till now we have successfully taken input from the arena using IR sensors. But what these sensors really provide is an analog output. To process the output from sensor module and provide input to the motors we will use LM324, a quad comparator IC to convert analog signal from sensor board to a digital signal. Now the use of quad comparators will be discussed a little later. Since we are not using microcontroller in our bot, this IC will serve as a (not so smart) brain. It will simply pick input signal from sensor module, binarize the signal and retransmit it to the motors via motor driver circuit and control its motion as explained below.
 
@@ -56,37 +56,38 @@ The output of the comparator IC is connected to one end of motor and the other e
 
 **Tip:** Reversing the comparator connections can make bot navigate in arena having white line on a black surface.
 
-#Pulse width Modulation
-=======================
+##Pulse width Modulation
+---
 
 Till now we were using constant voltage supply for the threshold voltage. Imagine if we could use triangular waves as threshold, than the varying voltage on the other pin of compartor would produce square waves of varying duty cycle i.e. Pulse width modulated waves. This wave can be further used in controlling speed of the motors. I won't go in much details as there is an exceptional explanation of this [here](http://www.ermicro.com/blog/?p=1908).
 
-<img src="https://github.com/IshankGulati/ishankgulati.github.io/tree/master/assets/lfr-ckt.jpg" alt="LFR circuit" style="width:840px;height:600px;">
+<img src="https://github.com/IshankGulati/ishankgulati.github.io/tree/master/assets/lfr-ckt.jpg" alt="LFR circuit" style="width:840px;height:600px;"/>
 
 The above picture has been taken from [here](http://www.ermicro.com/blog/?p=1908). I have not exactly followed the above circuit. They have used LDR sensors in place of IR sensors, transistors to drive motor and some other minor changes which can be easily figured out.
 
 Below is my implementation of this circuit.
 
-<img src="https://github.com/IshankGulati/ishankgulati.github.io/tree/master/assets/brain.jpg" alt="PWM circuit" style="width:400px;height:300px;">
+<img src="https://github.com/IshankGulati/ishankgulati.github.io/tree/master/assets/brain.jpg" alt="PWM circuit" style="width:400px;height:300px;"/>
 
-#Motor Driver Circuit
-=====================
+##Motor Driver Circuit
+---
 
-<img src="https://github.com/IshankGulati/ishankgulati.github.io/tree/master/assets/motor.jpg" alt="Motor Driver" style="width:400px;height:300px;">
+<img src="https://github.com/IshankGulati/ishankgulati.github.io/tree/master/assets/motor.jpg" alt="Motor Driver" style="width:400px;height:300px;"/>
 
 This is a very easy circuit. Just follow the above circuit diagram and you will be ready to go.
 
-#Power Supply
-=============
-<img src="https://github.com/IshankGulati/ishankgulati.github.io/tree/master/assets/7805.PNG" alt="7805" style="width:400px;height:300px;">
+##Power Supply
+---
+
+<img src="https://github.com/IshankGulati/ishankgulati.github.io/tree/master/assets/7805.PNG" alt="7805" style="width:400px;height:300px;"/>
 
 If a power supply of greater than 5v is used in the circuit, than a voltage regulator must be used to trim the voltage. Also it is advised to use a seperate power supply for motor driver circuit. 
 Solder a 0.33uF capacitor to the input pin of IC and a 0.1uF capacitor to the output pin and connect the othe end of capacitors to a common ground. Also connect the middle pin to the common ground. I have also connected an LED through 330ohm resistor for the on/off notification.
 
-<img src="https://github.com/IshankGulati/ishankgulati.github.io/tree/master/assets/power_sup.jpg " alt="Power Supply" style="width:400px;height:300px;">
+<img src="https://github.com/IshankGulati/ishankgulati.github.io/tree/master/assets/power_sup.jpg " alt="Power Supply" style="width:400px;height:300px;"/>
 
-#Chassis
-========
+##Chassis
+---
 
 Well the most difficult part is over. I made chassis by cutting out a small piece from plywood. Motors can be attached to chassis using L clamps. Also prebuilt chassis can be used. Now all that is left is combining all the parts and giving your bot a run.
 
@@ -94,7 +95,7 @@ Below I have attached the picture of the final implementation. Also I want to me
 
 Thanks! 
 
-<img src="https://github.com/IshankGulati/ishankgulati.github.io/tree/master/assets/lwr-wo-mcu.jpg " alt="Final LFR" style="width:400px;height:300px;">
+<img src="https://github.com/IshankGulati/ishankgulati.github.io/tree/master/assets/lwr-wo-mcu.jpg " alt="Final LFR" style="width:400px;height:300px;"/>
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=xkZcu1CB4b0
 " target="_blank"><img src="http://img.youtube.com/vi/xkZcu1CB4b0/0.jpg" 
