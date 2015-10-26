@@ -34,7 +34,7 @@ We will divide the robot in different building blocks, build them piece by piece
 
 An IR sensor is basically a device which consists of a pair of IR LED and photodiode. The IR LED emits IR radiation and the output of the sensor is dictated by the intensity of reception of the radiation by the photodiode. This is a part of the Robot which would actually interact and take input from the surroundings. Use the following schematic for implementation:
 
-<img src="/assets/sensor-ckt.png" alt="Sensor circuit" style="width:400px;height:300px;"/>
+<center><img src="/assets/sensor-ckt.png" alt="Sensor circuit" style="width:400px;height:300px;"/></center>
 
 <img src="/assets/sensor_module.jpg" alt="Sensor module" style="width:640px;height:400px;"/>
 
