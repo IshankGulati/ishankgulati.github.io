@@ -75,7 +75,7 @@ Below is my implementation of this circuit.
 
 This is a very easy circuit. Just follow the above circuit diagram and you will be ready to go.
 
-<img src="/assets/motor.jpg" alt="Motor Driver" style="width:400px;height:300px;"/>
+<center><img src="/assets/motor.jpg" alt="Motor Driver" style="width:400px;height:300px;"/></center>
 
 
 ##Power Supply
@@ -83,9 +83,9 @@ This is a very easy circuit. Just follow the above circuit diagram and you will 
 If a power supply of greater than 5v is used in the circuit, than a voltage regulator must be used to trim the voltage. Also it is advised to use a seperate power supply for motor driver circuit. 
 Solder a 0.33uF capacitor to the input pin of IC and a 0.1uF capacitor to the output pin and connect the othe end of capacitors to a common ground. Also connect the middle pin to the common ground. I have also connected an LED through 330ohm resistor for the on/off notification.
 
-<img src="/assets/7805.PNG" alt="7805" style="width:400px;height:300px;"/>
+<center><img src="/assets/7805.PNG" alt="7805" style="width:400px;height:300px;"/></center>
 
-<img src="/assets/power_sup.jpg " alt="Power Supply" style="width:400px;height:300px;"/>
+<img src="/assets/power_sup.jpg " alt="Power Supply" style="width:640px;height:400px;"/>
 
 
 ##Chassis
