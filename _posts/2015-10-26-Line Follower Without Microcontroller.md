@@ -33,7 +33,7 @@ We will divide the robot in different building blocks, build them piece by piece
 
 An IR sensor is basically a device which consists of a pair of IR LED and photodiode. The IR LED emits IR radiation and the output of the sensor is dictated by the intensity of reception of the radiation by the photodiode. This is a part of the Robot which would actually interact and take input from the surroundings. Use the following schematic for implementation:
 
-<img src="/assets/sensor-ckt.png" alt="Sensor circuit" style="width:400px;height:300px;" align="middle"/>
+<img src="/assets/sensor-ckt.png" alt="Sensor circuit" style="float:middle;width:400px;height:300px;"/>
 
 <img src="/assets/sensor_module.jpg" alt="Sensor module" style="width:640px;height:400px;"/>
 
@@ -74,23 +74,22 @@ Below is my implementation of this circuit.
 
 This is a very easy circuit. Just follow the above circuit diagram and you will be ready to go.
 
-<img src="/assets/motor.jpg" alt="Motor Driver" style="width:400px;height:300px;" align="middle"/>
+<img src="/assets/motor.jpg" alt="Motor Driver" style="float:middle;width:400px;height:300px;"/>
 
 
 ##Power Supply
----
 
 If a power supply of greater than 5v is used in the circuit, than a voltage regulator must be used to trim the voltage. Also it is advised to use a seperate power supply for motor driver circuit. 
 Solder a 0.33uF capacitor to the input pin of IC and a 0.1uF capacitor to the output pin and connect the othe end of capacitors to a common ground. Also connect the middle pin to the common ground. I have also connected an LED through 330ohm resistor for the on/off notification.
 
 <img src="/assets/7805.PNG" alt="7805" style="width:400px;height:300px;" align="middle"/>
 
-<img src="/assets/power_sup.jpg " alt="Power Supply" style="width:400px;height:300px;" align="middle"/>
+<img src="/assets/power_sup.jpg " alt="Power Supply" style="float:middle;width:400px;height:300px;"/>
 
 
 ##Chassis
 
-Well the most difficult part is over. I made chassis by cutting out a small piece from plywood. Motors can be attached to chassis using L clamps. Also prebuilt chassis can be used. Now all that is left is combining all the parts and giving your bot a run.
+Well the difficult part is over. The only thing left is to get a chassis and assemble all the above parts. I made chassis by cutting out a small piece from plywood. Motors can be attached to chassis using L clamps. Also prebuilt chassis can be used. Now all that is left is combining all the parts and giving your bot a run.
 
 Below I have attached the picture of the final implementation. Also I want to mention that this bot won first place in IIT Delhi's techfest Tryst'14. I have also attached the video which my team took during the performance at IIT Delhi.
 
