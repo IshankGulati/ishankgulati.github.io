@@ -3,6 +3,7 @@ layout: post
 title: Line Follower using AVR ATmega32
 comments: True
 share: True
+tags: [Robotics]
 ---
 
 In the last post we discussed about how to build a line follower without using a microcontroller. These kind of line follower robots have certain limitations that they can't move in reverse direction and don't employ any feedback mechanism. Also situations when there is a fork or sharp turns in the path, these kinds of robots would fail. The addition of a microcontroller gives us the ability to program our robot according to different situations. Some of the advantages of a microcontroller based line follower are given below:

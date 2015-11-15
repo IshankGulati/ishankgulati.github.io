@@ -1,3 +1,7 @@
+# Dependencies
+markdown:            redcarpet
+highlighter:         pygments
+
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
@@ -6,31 +10,25 @@ relative_permalinks: true
 
 # Setup
 title:               Ishank Gulati
-tagline:             'Code the way to success'        
+tagline:             'BTech student at Malaviya National Institute of Technology'
+description:         'Learn Improvise Innovate Repeat'
+url:                 http://ishankgulati.github.io
+giturl:				 http://ishankgulati.github.io
+baseurl:             /
 paginate:            5
 paginate_path:       "blog/page:num"
-baseurl:             http://ishankgulati.github.io/
-highlighter:         pygments
-
-pages_list:       
-  About: '/about'
-  Archive: '/archive'
-  Feed: '/atom.xml'
-  
-# Assets
-#
-# We specify the directory for Jekyll so we can use @imports.
-sass:
-  sass_dir:          _sass
-  style:            :compressed
+rss:                 atom.xml
 
 # About/contact
 author:
-  name:              Ishank Gulati
-  url:               
-  email:             gulati.ishank@gmail.com
+  name:             Ishank Gulati
+  github:           IshankGulati
+  email:            gulati.ishank@gmail.com
+  linkedin:         ishankgulati
+  gravatar_md5:     01f7b07a31316e30cdfe827e2fc68e7c
 
 # Custom vars
-version:             2.0.0
+version:             1.0.0
+
 github:
-  repo:              https://github.com/ishank08/IshankGulati.github.io
+  repo:           https://github.com/IshankGulati/ishankgulati.github.io
