@@ -24,18 +24,18 @@ Perfect mazes have a characteristic that their is only one possible path from st
 
 Dilation is one of the two basic operators in the area of mathematical morphology, the other being erosion. It is typically applied to binary images, but there are versions that work on grayscale images. The basic effect of the operator on a binary image is to gradually enlarge the boundaries of regions of foreground pixels (i.e. white pixels, typically). Thus areas of foreground pixels grow in size while holes within those regions become smaller.
 
-####Erosionn
+####Erosion
 Erosion is the second morphological operator. It is also applied to binary images. The basic effect of the operator on a binary image is to erode away the boundaries of regions of foreground pixels (i.e. white pixels, typically). Thus areas of foreground pixels shrink in size, and holes within those areas become larger.
 
 ##Implementation
 
 * Load and convert the source image to binary image
 
-'''python
+```python
 img = cv2.imread('maze.png')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 ret, thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY_INV)
-'''
+```
 
 Inverted thresolding will give us a binary image with white wall and black background.
 
@@ -43,37 +43,37 @@ Inverted thresolding will give us a binary image with white wall and black backg
 
 * Find the contours
 
-'''python
+```python
 contours, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
 cv2.drawContours(thresh, contours, 0, (255, 255, 255), -1)
 ret, thresh = cv2.threshold(thresh, 240, 255, cv2.THRESH_BINARY)
-'''
+```
 
 Since, the maze can be divided into an open path seperated by two walls, finding contours will give us both the walls. Select ay contour for further operations.
 
 * Dilate the contour 
 
-'''python
+```python
 kernel = np.ones((19, 19), np.uint8)
 dilation = cv2.dilate(thresh, kernel, iterations=1)
-'''
+```
 
 <center><img src="/assets/dilate.jpg" alt="dilate" style="width:400px;height:400px;"/></center>
 
 * Erode the Dilated image by same amount
 
-'''python
+```python
 kernel = np.ones((19, 19), np.uint8)
 erosion = cv2.erode(dilation, kernel, iterations=1)
-'''
+```
 
 <center><img src="/assets/erosion.jpg" alt="erosion" style="width:400px;height:400px;"/></center>
 
 * Find diff of two images
 
-'''python
+```python
 diff = cv2.absdiff(dilation,erosion)
-'''
+```
 
 The absolute difference of two images will give us the solution of maze.
 
@@ -81,7 +81,7 @@ The absolute difference of two images will give us the solution of maze.
 
 * Draw the obtained path on source images
 
-'''python
+```python
 b, g, r = cv2.split(img)
 mask_inv = cv2.bitwise_not(diff)
 
@@ -90,7 +90,7 @@ r = cv2.bitwise_and(r, r, mask=mask_inv)
 g = cv2.bitwise_and(g, g, mask=mask_inv)
 
 res = cv2.merge((b, g, r))
-'''
+```
 
 To show the solution on the original maze image, first split the original maze into it's r, g, b components. Now create a mask by inverting the diff image. Bitwise and r and g components of original maze using the mask created in the last step. This step would remove the red and green components from the portion of image where solution of maze exists. The last is to merge all the components and we will have the final image with solution marked by blue colour.
 
