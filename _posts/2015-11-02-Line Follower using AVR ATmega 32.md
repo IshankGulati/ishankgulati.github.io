@@ -38,7 +38,7 @@ So let's go ahead and look at the materials required to build this robot.
 
 Again, we will take the same approach as the previous post and we will divide the project into various subtasks and implement them one by one.
 
-##The Sensor array
+## The Sensor array
 
 <center><img src="/assets/sensor-ckt.png" alt="Sensor circuit" style="width:400px;height:300px;"/></center>
 <center><sub>Circuit diagram of single sensor</sub></center><br>
@@ -49,7 +49,7 @@ Again, we will take the same approach as the previous post and we will divide th
 
 The sensor array has a total of eight sensor pairs. The reason for using more number of sensors is to make the robot more flexible to different problem statements or situations. If there are some constraints regarding the number of sensors, then the sensor array can be implemented using five sensors. The spacing between sensors should be according to arena, in my case it is 2cm. I have connected two LM324 ICs at the bottom of sensor board itself for ADC conversion of signal from the sensor array. You can also use built-in ADC in microcontroller to avoid the extra circuitory. I have soldered potentiometers on the reverse side of sensor board for easy calibration.
 
-##Development Board
+## Development Board
 
 <img src="/assets/devboard_schematic.png" alt="Development Board" style="width:640px;height:400px;"/>
 <center><sub>Development board schematic</sub></center><br>
@@ -71,11 +71,11 @@ Referring to the pin diagram in the datasheet of Atmega32, the connections to be
 * Pins 14 to 17 - LCD Data pins (DB4 to DB7)
 * Pins 6 to 11 - ISP header
 
-##Algorithm
+## Algorithm
 
 The sensor readings are taken from the output of LM324 and stored in a byte. If a bit is 1 then the corresponding sensor is on the line and in case of 0 sensor is not on the line.
 
-####Sensor Configuration
+#### Sensor Configuration
 
 * Forward         - 00011000
 * Left            - 00110000 or 01100000 or 11000000
@@ -90,14 +90,14 @@ The sensor readings are taken from the output of LM324 and stored in a byte. If 
 
 > **Note:** In case of any discontinuities, the robot will move straight until it detects the line.
 
-####Motor library commands
+#### Motor library commands
 
 * init_motors() - This function sets the pins in microcontroller to switch on the PWM functionality which is used to control the speed of motors. It must be called once before the infinite loop. 
 * set_motors() - This function sets the speed and direction of rotation of motors. Speed can be set between +250 to -250 where +250 signifies full speed in forward direction and -250 signifies full speed in reverse direction.
 
-####Code Snippet 
+#### Code Snippet 
 
-```c
+{% highlight c linenos %}
 
 //straight
 if((sensors == 0b11100111)||(sensors == 0b11101111)||(sensors == 0b11110111))
@@ -173,7 +173,7 @@ else
 	set_motors(ROTATESPEED,-ROTATESPEED);
 }
 
-```
+{% endhighlight %}
 
 > Refer my [Repository](https://github.com/IshankGulati/Line-Follower) for complete code.
 

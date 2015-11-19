@@ -6,28 +6,28 @@ share: True
 tags: [Image Processing]
 ---
 
-##Introduction
+## Introduction
 
 This project aims at finding the solution of perfect mazes which is defined as a maze which has only one path from any point in the maze to any other point. Also, maze has no inaccessibe sections, no circular paths and no open areas. Maze images should have dark walls on light background. I have included some sample images. To generate mazes, this online [maze generator](http://mazegenerator.net/) can be used. This project idea is taken from [this](http://www.mathworks.com/matlabcentral/fileexchange/27175-maze-solution) File exchange submission.
 
 <center><img src="/assets/maze.png" alt="maze" style="width:400px;height:400px;"/></center>
 
-##Tools
+## Tools
 
 [OpenCV 2.4](http://sourceforge.net/projects/opencvlibrary/files/opencv-win/), an Open-source Computer Vision library is used with Python 2.7. For instructions regarding the installation of OpenCV refer [documentation](http://docs.opencv.org/2.4/doc/tutorials/introduction/windows_install/windows_install.html#windows-install-prebuild).
 
-##Task Analysis
+## Task Analysis
 
 Perfect mazes have a characteristic that their is only one possible path from start to end. This means that this image can be divided into two parts and this boundary of division will be the solution itself. Therefore, morphological transformatons like erosion and dilation are just enough to find the solution of the maze.
 
-####Dilation
+#### Dilation
 
 Dilation is one of the two basic operators in the area of mathematical morphology, the other being erosion. It is typically applied to binary images, but there are versions that work on grayscale images. The basic effect of the operator on a binary image is to gradually enlarge the boundaries of regions of foreground pixels (i.e. white pixels, typically). Thus areas of foreground pixels grow in size while holes within those regions become smaller.
 
-####Erosion
+#### Erosion
 Erosion is the second morphological operator. It is also applied to binary images. The basic effect of the operator on a binary image is to erode away the boundaries of regions of foreground pixels (i.e. white pixels, typically). Thus areas of foreground pixels shrink in size, and holes within those areas become larger.
 
-##Implementation
+## Implementation
 
 * Load and convert the source image to binary image
 
