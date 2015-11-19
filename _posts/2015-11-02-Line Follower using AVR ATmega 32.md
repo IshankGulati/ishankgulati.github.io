@@ -97,7 +97,7 @@ The sensor readings are taken from the output of LM324 and stored in a byte. If 
 
 ####Code Snippet 
 
-{% highlight c linenos %}
+'''c
 
 //straight
 if((sensors == 0b11100111)||(sensors == 0b11101111)||(sensors == 0b11110111))
@@ -173,9 +173,9 @@ else
 	set_motors(ROTATESPEED,-ROTATESPEED);
 }
 
-{% endhighlight %}
+'''
 
-> Refer to my [Repository](https://github.com/IshankGulati/Line-Follower) for complete code.
+> Refer my [Repository](https://github.com/IshankGulati/Line-Follower) for complete code.
 
 Here is the robot in action
 
