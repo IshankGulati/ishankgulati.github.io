@@ -1,8 +1,10 @@
 # Dependencies
 markdown:            redcarpet
 highlighter:         pygments
+markdown_ext:  markdown,mkdown,mkdn,mkd,md
+
 redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
+  extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "with_toc_data", "fenced_code_blocks"]
   
 # Permalinks
 #
@@ -16,7 +18,7 @@ tagline:             'BTech student at Malaviya National Institute of Technology
 description:         'Learn Improvise Innovate Repeat'
 url:                 http://ishankgulati.github.io
 giturl:				 http://ishankgulati.github.io
-baseurl:             '/'
+baseurl:             ""
 paginate:            5
 paginate_path:       "blog/page:num"
 rss:                 atom.xml
@@ -27,6 +29,7 @@ author:
   github:           IshankGulati
   email:            gulati.ishank@gmail.com
   linkedin:         ishankgulati
+  facebook:			ishank.gulati.3
   gravatar_md5:     01f7b07a31316e30cdfe827e2fc68e7c
 
 # Custom vars

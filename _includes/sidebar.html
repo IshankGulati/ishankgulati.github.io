@@ -20,7 +20,7 @@
       {% endif %}
 
       {% if site.author.linkedin %}
-        <a href="https://linkedin.com/in/{{ site.author.github }}">
+        <a href="https://linkedin.com/in/{{ site.author.linkedin }}">
           <span class="fa-stack fa-lg">
             <i class="fa fa-square-o fa-stack-2x"></i>
             <i class="fa fa-linkedin fa-stack-1x"></i>
@@ -28,14 +28,15 @@
         </a>
       {% endif %}
 
-      {% if site.author.email %}
-        <a href="mailto: {{ site.author.email }}">
+      {% if site.author.facebook %}
+        <a href="https://facebook.com/in/{{ site.author.facebook }}">
           <span class="fa-stack fa-lg">
             <i class="fa fa-square-o fa-stack-2x"></i>
-            <i class="fa fa-envelope fa-stack-1x"></i>
+            <i class="fa fa-facebook-official fa-stack-1x"></i>
           </span>
         </a>
       {% endif %}
+	  
   </div>
 
   <div id="contact-list" style="text-align:center">
@@ -67,6 +68,14 @@
       </a>
     {% endif %}
 
+      {% if site.author.email %}
+        <a href="mailto: {{ site.author.email }}">
+          <span class="fa-stack fa-lg">
+            <i class="fa fa-square-o fa-stack-2x"></i>
+            <i class="fa fa-envelope fa-stack-1x"></i>
+          </span>
+        </a>
+      {% endif %}	
   </div>
   
   <div class="sidebar-item" style="text-align: center">
