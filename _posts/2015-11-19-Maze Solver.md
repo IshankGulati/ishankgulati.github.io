@@ -31,7 +31,7 @@ Erosion is the second morphological operator. It is also applied to binary image
 
 * Load and convert the source image to binary image
 
-{% highlight python %}
+{% highlight python linenos %}
 img = cv2.imread('maze.png')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 ret, thresh = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY_INV)
@@ -43,7 +43,7 @@ Inverted thresolding will give us a binary image with white wall and black backg
 
 * Find the contours
 
-{% highlight python %}
+{% highlight python linenos %}
 contours, hierarchy = cv2.findContours(thresh, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
 cv2.drawContours(thresh, contours, 0, (255, 255, 255), -1)
 ret, thresh = cv2.threshold(thresh, 240, 255, cv2.THRESH_BINARY)
@@ -53,7 +53,7 @@ Since, the maze can be divided into an open path seperated by two walls, finding
 
 * Dilate the contour 
 
-{% highlight python %}
+{% highlight python linenos %}
 kernel = np.ones((19, 19), np.uint8)
 dilation = cv2.dilate(thresh, kernel, iterations=1)
 {% endhighlight %}
@@ -62,7 +62,7 @@ dilation = cv2.dilate(thresh, kernel, iterations=1)
 
 * Erode the Dilated image by same amount
 
-{% highlight python %}
+{% highlight python linenos %}
 kernel = np.ones((19, 19), np.uint8)
 erosion = cv2.erode(dilation, kernel, iterations=1)
 {% endhighlight %}
@@ -71,7 +71,7 @@ erosion = cv2.erode(dilation, kernel, iterations=1)
 
 * Find diff of two images
 
-{% highlight python %}
+{% highlight python linenos %}
 diff = cv2.absdiff(dilation,erosion)
 {% endhighlight %}
 
@@ -81,7 +81,7 @@ The absolute difference of two images will give us the solution of maze.
 
 * Draw the obtained path on source images
 
-{% highlight python %}
+{% highlight python linenos %}
 b, g, r = cv2.split(img)
 mask_inv = cv2.bitwise_not(diff)
 
