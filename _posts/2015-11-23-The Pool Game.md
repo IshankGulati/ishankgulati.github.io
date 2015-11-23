@@ -21,7 +21,7 @@ Assuming that the pool cue stick shoots the striker ball in a straight line, and
 
 [OpenCV 2.4](http://sourceforge.net/projects/opencvlibrary/files/opencv-win/), an Open-source Computer Vision library is used with Python 2.7. For instructions regarding the installation of OpenCV refer [documentation](http://docs.opencv.org/2.4/doc/tutorials/introduction/windows_install/windows_install.html#windows-install-prebuild).
 
-##Task Analysis
+## Task Analysis
 
 From the test images we observe that:
 

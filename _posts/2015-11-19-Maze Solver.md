@@ -20,11 +20,11 @@ This project aims at finding the solution of perfect mazes which is defined as a
 
 Perfect mazes have a characteristic that their is only one possible path from start to end. This means that this image can be divided into two parts and this boundary of division will be the solution itself. Therefore, morphological transformatons like erosion and dilation are just enough to find the solution of the maze.
 
-#### Dilation
+#### **Dilation**
 
 Dilation is one of the two basic operators in the area of mathematical morphology, the other being erosion. It is typically applied to binary images, but there are versions that work on grayscale images. The basic effect of the operator on a binary image is to gradually enlarge the boundaries of regions of foreground pixels (i.e. white pixels, typically). Thus areas of foreground pixels grow in size while holes within those regions become smaller.
 
-#### Erosion
+#### **Erosion**
 Erosion is the second morphological operator. It is also applied to binary images. The basic effect of the operator on a binary image is to erode away the boundaries of regions of foreground pixels (i.e. white pixels, typically). Thus areas of foreground pixels shrink in size, and holes within those areas become larger.
 
 ## Implementation
