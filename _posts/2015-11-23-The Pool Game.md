@@ -33,7 +33,7 @@ From the test images we observe that:
 
 Our goal is to determine the number of pool ball which striker ball would hit. Simply saying, we need to detect the intersection of the line tangent to pool balls and the line which passes through the middle of cue stick and the center of striker ball. The y co-ordinate of intersection will determine the number of target pool ball.
 
-We know from elementary geometry that we require at least two points to construct a line. In this image we have two unique markings on cue stick whose centroid can be used as one of the two points. We can also use center of white striker ball as one of the point. I have used center of striker ball and the centroid of pink mark on cue stick to produce a line which can be extrapolated to detect the intersection.
+We know from elementary geometry that we require at least two points to construct a line. In this image there are two unique markings on cue stick whose centroid can be used as one of the two points. Also, center of white striker ball can be used as one of the point. I have used center of striker ball and the centroid of pink mark on cue stick to produce a line which can be extrapolated to detect the intersection.
 
 > **Note:** I have assumed upper left corner as origin.
 
@@ -63,7 +63,7 @@ for i in circles[0, :]:
   
 * **Pink patch on cue stick**
 
-We have already calculated the coordinates of center of striker ball. Now all we need is another point to draw a line. To segment pink patch we will mask the image corrsponding to the color of patch and then use contours to segment out the pink patch from image. For masking first we will convert our image to hsv color space. This is done because it is easier to represent a color in HSV, than in BGR color space. After changing the color space, we threshold the HSV image for pink color. Next, we will find contours in the masked image. As the masked image only contains the pink portion of cue stick, finding contours in this image will return the pik portion of stick as the oly contour. To find the cetroid of this contour, we will use [moments](http://aishack.in/tutorials/image-moments/) method.
+The coordinates of center of striker ball have already been calculated. Now, another point is required to draw a line. To segment pink patch we will mask the image corrsponding to the color of patch and then use contours to segment out the pink patch from image. For masking first we will convert our image to hsv color space. This is done because it is easier to represent a color in HSV, than in BGR color space. After changing the color space, we threshold the HSV image for pink color. Next, we will find contours in the masked image. As the masked image only contains the pink portion of cue stick, finding contours in this image will return the pik portion of stick as the oly contour. To find the cetroid of this contour, we will use [moments](http://aishack.in/tutorials/image-moments/) method.
 
 {% highlight python linenos %}
 
