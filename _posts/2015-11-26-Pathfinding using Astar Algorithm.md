@@ -50,10 +50,10 @@ A* is one of the most popular choice for pathfinding. It is wide range of applic
 * **Representing the Image**
 The fist subtask is to convert the image to a matrix representation. For this purpose create a matrix with size corresponding to the rows and column given in problem statement. Traverse this matrix and assign:
 
-# 0 to traversable blocks
-# 1 to obstacles
-# 2 to start block
-# 3 to end block 
+	- 0 to traversable blocks
+	- 1 to obstacles
+	- 2 to start block
+	- 3 to end block 
 
 {% highlight python linenos %}
 grid = np.zeros((rows, columns))
@@ -76,12 +76,12 @@ for i in range(rows):
 * **Representing the Cell**
 We will define some attributes for each cell in the grid.  
 
-# x and y coordinate
-# Parent - The cell from where we reach the current cell.
-# Reachability - If the cell is an obstacle, reachability is false, else true.
-# Cost - The cost of moving to this cell or weight of the node.
-# Heuristic - Measure of distance from goal. Absolute or euclidean distance can be used.
-# Net Cost - Cost + Heuristic
+	- x and y coordinate
+	- Parent - The cell from where we reach the current cell.
+	- Reachability - If the cell is an obstacle, reachability is false, else true.
+	- Cost - The cost of moving to this cell or weight of the node.
+	- Heuristic - Measure of distance from goal. Absolute or euclidean distance can be used.
+	- Net Cost - Cost + Heuristic
 
 * **A* Search**
 Implementing A* requires maintaining two lists i.e. open, closed. The open list contains the cells which are next to be examined and closed list contains cells that have already been examined. To store the information about each cell I have maintained a third list, cells. The data structure used for implementing open list is a [min heap](https://www.hackerearth.com/notes/heaps-and-priority-queues/) which is heapified using Net Cost(cell cost + heuristic). In an abstract description, heap data structure is used to get the cell with lowest net cost around the current cell. Now, we will do a regular [Breadth first search](https://www.hackerearth.com/notes/graph-theory-part-i/) on the graph. The major difference would be that instead of a simple queue used in BFS, we will use open list to store the neighboring reachable cells from the current node. Also to keep a track of already examined nodes, move them to closed list. While traversing the graph we will regularly update the parent of the next cell to be visited with current cell which will be used to track the path we have taken. We exit this loop as soon as we reach the node marked as end.
@@ -114,6 +114,8 @@ while(len(self.open)):
 
 {% endhighlight %} 
 
+
 > Refer my [repository](https://github.com/IshankGulati/Image-Processing/tree/master/Astar%20Search) for complete code.
+
 
 Thanks and have a great time implementing your own version of this algorithm!
