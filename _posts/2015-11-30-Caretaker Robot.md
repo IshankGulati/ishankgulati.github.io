@@ -26,17 +26,17 @@ My team had to design the algorithm for
 * There are two zones in the arena: (i) Patient zone and (ii) Service zone, connected by a Corridor.
 * There are three types of provisions that a patient can request: Medicine, Water, or Thermometer.
 * These provisions are represented by Provision markers of different colors:
-	- Red (R) for Medicines
-	- Blue (B) for Water, and
-	- Yellow (Y) for Thermometer.
+	+ Red (R) for Medicines
+	+ Blue (B) for Water, and
+	+ Yellow (Y) for Thermometer.
 * The Patient zone consists of:
-	- Three beds for patients: BED1, BED2, BED3
-	- Each patient has a table: T1, T2, T3
-	- Provision markers (R, B or Y) will be placed on the tables to indicate request for a provision.
+	+ Three beds for patients: BED1, BED2, BED3
+	+ Each patient has a table: T1, T2, T3
+	+ Provision markers (R, B or Y) will be placed on the tables to indicate request for a provision.
 * The Service zone consists of:
-	- Three storage cupboards marked by positions, P1, P2, P3.
-	- Each storage cupboard (P1, P2, or P3) contains one type of provision: Medicine, Water, or Thermometer, marked by a corresponding Provision marker.
-	- P1, P2, P3 are separated by Fixed Partitions, FP1 and FP2, as shown in Figure 1.
+	+ Three storage cupboards marked by positions, P1, P2, P3.
+	+ Each storage cupboard (P1, P2, or P3) contains one type of provision: Medicine, Water, or Thermometer, marked by a corresponding Provision marker.
+	+ P1, P2, P3 are separated by Fixed Partitions, FP1 and FP2, as shown in Figure 1.
 * The Corridor is made of wall divisions placed at positions marked by D1, D2, .. , D8.
 * There are 4 wall divisions – 2 on either side of the corridor – placed at 4 specified positions among D1, D2, .. , D8. Placements of the wall divisions will be provided as input. An example is shown in Figure 1. Note that the vacant divisions will be used by the robot to navigate between the two zones.
 * There are 3 possible Start positions, S1, S2, or S3, for the robot, marked on the corridor.
@@ -77,10 +77,10 @@ My team had to design the algorithm for
 * Mark the position of all the obstacles and markers in a matrix of the size of grid which will be again used in exexuting A*. 
 
 * To easily locate the bot, I fixed two distinct coloured stickers on top of it. Let's denote the front sticker by F and rear sticker by R. To find out the coordinates of bot, simply apply above step on these stickers. To detect orientation of bot:
-	- North - distance of F < distance of R from upper side of arena, distance of F = distance of R from left side of arena
-	- South - distance of F > distance of R from upper side of arena, distance of F = distance of R from left side of arena
-	- East - distance of F > distance of R from left side of arena, distance of F = distance of R from upper side of arena
-	- West - distance of F < distance of R from left side of arena, distance of F = distance of R from upper side of arena
+	+ North - distance of F < distance of R from upper side of arena, distance of F = distance of R from left side of arena
+	+ South - distance of F > distance of R from upper side of arena, distance of F = distance of R from left side of arena
+	+ East - distance of F > distance of R from left side of arena, distance of F = distance of R from upper side of arena
+	+ West - distance of F < distance of R from left side of arena, distance of F = distance of R from upper side of arena
 
 * In the next step, calculate the number of markers of given three colours in patient zone. Further algorithm can be divided into three broad cases:
 	1. All the markers are of same colour.
@@ -100,7 +100,7 @@ I will explain the first case where all the markers are of same colour.
 
 * All other cases are similar in my implementation. I have computed distance from all the markers from current position anf then used greedy approach to select the one with minimum path length.
 
-> Refer my [repository](https://github.com/IshankGulati/PathFinder-Robot) for complete code.
+> Refer my [repository](https://github.com/IshankGulati/Caretaker-Robot) for complete code.
 
 Here is the robot in action
 
