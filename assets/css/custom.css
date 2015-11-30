@@ -1,36 +1,22 @@
-/* [START] Profile Picture */
-.circularProfilePic {
-	width: 200px;
-	height: 200px;
-	border-radius: 100px;
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;
-	background: url(../images/profile.png) no-repeat;
-	/*box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);*/
-
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
+.sidebar {
+       opacity: 0.8;
 }
-
-.smallerCircularProfilePic {
-	width: 150px;
-	height: 150px;
-	border-radius: 75px;
-	-webkit-border-radius: 75px;
-	-moz-border-radius: 75px;
-	background: url(../images/profile_small.png) no-repeat;
-	/*box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);*/
-
-	display: block;
-		margin-left: auto;
-		margin-right: auto;
+   
+.sidebar:hover {
+       opacity: 1.0;
 }
-/* [END] Profile Picture */
+   
+.sidebar-logo {
+      padding: 1.5rem;
+}
+  
+.sidebar-logo img {
+      border-radius: 50%;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      width: 160px;
+      margin: 0 auto;
+}
 
 /* [START] POST TAGS STYLING*/
 .tags {
