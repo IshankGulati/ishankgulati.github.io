@@ -18,7 +18,7 @@ url:                 http://ishankgulati.github.io
 giturl:				 http://ishankgulati.github.io
 baseurl:             '/'
 paginate:            5
-paginate_path:       "blog/page:num"
+#paginate_path:       "blog/page:num"
 rss:                 atom.xml
 
 # About/contact
