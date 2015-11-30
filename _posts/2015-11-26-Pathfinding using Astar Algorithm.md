@@ -3,7 +3,7 @@ layout: post
 title: "Pathfinding using A* Algorithm"
 date: 2015-11-25
 comments: True
-categories: [Image Processing, Artificial Intelligence]
+tags: Image-Processing Artificial-Intelligence
 ---
 
 ## Introduction

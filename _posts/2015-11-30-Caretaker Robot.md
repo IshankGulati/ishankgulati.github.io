@@ -3,7 +3,7 @@ layout: post
 title: "Caretaker Robot"
 date: 2015-11-30
 comments: True
-categories: [Robotics, Artificial Intelligence, Computer Vision]
+tags: Robotics Artificial-Intelligence Computer-Vision
 ---
 
 ## Introduction

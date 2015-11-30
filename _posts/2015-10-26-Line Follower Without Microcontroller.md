@@ -3,7 +3,7 @@ layout: post
 title: "Line Follower Without Microcontroller"
 date:   2015-10-26
 comments: True
-categories: Robotics
+tags: Robotics
 ---
 
 This is where it all started. I built it around two years ago when I just started experimenting with electronics and programming. It was a fun project which taught me a ton and is a great choice for the beginners in Robotics.

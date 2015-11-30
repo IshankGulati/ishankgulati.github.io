@@ -3,7 +3,7 @@ layout: post
 title: "The Pool Game"
 date: 2015-11-23
 comments: True
-categories: Image Processing
+tags: Image-Processing
 ---
 
 ## Introduction
