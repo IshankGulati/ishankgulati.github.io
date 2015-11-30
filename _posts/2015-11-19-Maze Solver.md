@@ -4,7 +4,7 @@ title: "Maze Solver"
 date:   2015-11-19
 comments: True
 share: True
-categories: Image-Processing
+tags: Image-Processing
 ---
 
 ## Introduction
