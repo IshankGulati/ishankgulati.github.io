@@ -10,21 +10,31 @@
     {% if page.title == "Home" %}
       {{ site.title }} &middot; {{ site.tagline }}
     {% else %}
-      {{ page.title }} &middot; {{ site.title }}
+      {{ page.title }} &middot; {{ site.author.name }}
     {% endif %}
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/custom.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/all.min.css">
+  <!--
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/poole.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/syntax.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/lanyon.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/custom.css">
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/poole.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/syntax.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/public/css/lanyon.css">
+  -->
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 
   <!-- Icons -->
-  <link rel="shortcut icon" href="{{ site.baseurl }}/public/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}assets/favicon.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}assets/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+  <link rel="canonical" href="{{ page.url }}" />
+
+  <script async src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/libs/jquery.js"><\/script>')</script>
+
 </head>

@@ -1,34 +1,50 @@
 # Dependencies
-markdown:            redcarpet
-highlighter:         pygments
+markdown:         redcarpet
+redcarpet:
+  extensions:     [strikethrough,smart,with_toc_data,tables]
+highlighter:      pygments
+
 # Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:           pretty
-relative_permalinks: true
+permalink:        /posts/:title/
 
-# Setup
-title:               Ishank Gulati
-tagline:             'BTech student at Malaviya National Institute of Technology'
-description:         'Learn Improvise Innovate Repeat'
-url:                 http://ishankgulati.github.io
-giturl:				 http://ishankgulati.github.io
-baseurl:             ""
-paginate:            5
-paginate_path:       "blog/page:num"
-rss:                 atom.xml
+# User Configuration
+title:            Ishank Gulati
+tagline:          'BTech student at Malaviya National Institute of Technology'
+description:      'Learn Improvise Innovate Repeat'
+url:              http://ishankgulati.github.io
+baseurl:          '/'
+paginate:         5
+excerpt_separator: '<br>'
+gems:
+- jekyll-mentions
+- jemoji
+- jekyll-redirect-from
+- jekyll-sitemap
 
-# About/contact
+# Author Info
 author:
   name:             Ishank Gulati
   github:           IshankGulati
   email:            gulati.ishank@gmail.com
   linkedin:         ishankgulati
-  facebook:			ishank.gulati.3
+  facebook:         ishank.gulati.3
   gravatar_md5:     01f7b07a31316e30cdfe827e2fc68e7c
+  twitter:          ishank08
+  google:           +IshankGulati
 
-# Custom vars
-version:             1.0.0
+# Social Integration
+social:
+  disqus:         ishankgulati
+  addthis_pubid:  ra-565c02c2d38ee9fd
 
+# Google Analytics Configuration
+# Proxy response must be in JSON and should have the fields - ga:pagePath, ga:pageview
+google_analytics:
+  tracking_id:      UA-69210747-1
+
+# Github
 github:
   repo:           https://github.com/IshankGulati/ishankgulati.github.io
+
+# Version Info
+version:          1.2.0

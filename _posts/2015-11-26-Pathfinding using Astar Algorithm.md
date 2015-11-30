@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Pathfinding using A* Algorithm
+title: "Pathfinding using A* Algorithm"
+date: 2015-11-25
 comments: True
-share: True
-tags: [Image Processing, Artificial Intelligence]
+categories: [Image Processing, Artificial Intelligence]
 ---
 
 ## Introduction

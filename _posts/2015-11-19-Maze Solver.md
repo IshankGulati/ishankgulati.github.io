@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Maze Solver
+title: "Maze Solver"
+date:   2015-11-19
 comments: True
 share: True
-tags: [Image Processing]
+categories: Image Processing
 ---
 
 ## Introduction

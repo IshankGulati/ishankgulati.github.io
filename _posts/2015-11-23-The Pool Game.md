@@ -1,9 +1,9 @@
 ---
 layout: post
-title: The Pool Game
+title: "The Pool Game"
+date: 2015-11-23
 comments: True
-share: True
-tags: [Image Processing]
+categories: Image Processing
 ---
 
 ## Introduction
