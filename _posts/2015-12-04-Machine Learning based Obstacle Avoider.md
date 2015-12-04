@@ -30,7 +30,7 @@ For robot navigation, image segmentation is the process of decomposing an image 
 
 In general, thresholding creates binary images from grey-level ones by using a fixed threshold value, turning all pixels below some threshold to 0 and all pixels about that threshold to 1. But a fixed threshold value can't be used for navigation of robot in a dynamically changing environment. So, a pre-defined area of the image has been used to calculate the threshold values fro every image captured. The bottom most part of the image is most likely to contain the floor which is the desirable region for navigation. So, this part of image is used to calculate the correct values for the parameters necessary to extract the required information from each image.
 
-<center><img src="/assets/mlr_floor" alt="floor" style="width:640px;height:400px;"/></center>
+<center><img src="/assets/mlr_floor.jpg" alt="floor" style="width:640px;height:400px;"/></center>
 
 To avoid converting RGB to other colour spaces such as HSV, C. Lin, C. H. Su, H. S. Huang, and K. C. Fan in their [journal](http://www.scopus.com/record/display.uri?eid=2-s2.0-79959860293&origin=inward&txGid=B65AA7A1821E2482A2884CD04CB58476.N5T5nM1aaTEF8rE6yKCR3A%3a2) devised a method which uses 5 constant threshold variables to determine whether an RGB pixel is within a specific colour zone. Assuming the following variable values:
 
@@ -151,8 +151,8 @@ I used an Artificial Neural Network to control the navigation. I implemented a N
 
 Here is the robot in action
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=LIMlkZildhA
-" target="_blank"><img src="http://img.youtube.com/vi/LIMlkZildhA/0.jpg"
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=z-2WjbJFN7Q
+" target="_blank"><img src="http://img.youtube.com/vi/z-2WjbJFN7Q/0.jpg"
 alt="Obstacle avoider" width="640" height="427" border="5"/></a>
 
 Thanks! 
