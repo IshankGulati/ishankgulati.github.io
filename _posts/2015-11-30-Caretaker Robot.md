@@ -26,9 +26,9 @@ My team had to design the algorithm for
 	* There are two zones in the arena: (i) Patient zone and (ii) Service zone, connected by a Corridor.
 	* There are three types of provisions that a patient can request: Medicine, Water, or Thermometer.
 	* These provisions are represented by Provision markers of different colors:
-		+ Red (R) for Medicines
-		+ Blue (B) for Water, and
-		+ Yellow (Y) for Thermometer.
+		+ Red for Medicines
+		+ Blue for Water, and
+		+ Yellow for Thermometer.
 	* The Patient zone consists of:
 		+ Three beds for patients: BED1, BED2, BED3
 		+ Each patient has a table: T1, T2, T3
