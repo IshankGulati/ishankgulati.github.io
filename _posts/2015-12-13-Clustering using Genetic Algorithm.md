@@ -39,15 +39,17 @@ We will use Genetic Algorithm for clustering data. Several clusering techniques 
 
 	+ Fitness computation is done in two phases similar to K-Means clustering. In first phase dist matrix is populated with distance of all the cluster centers from the chromosome under consideration. Then, each data point is assigned a cluster center whose distance from this data point is least and is stored in a lablels vector.
 
-	+ In the second phase, the cluster centers encoded in the current chromosome are replaced by mean of the data points assigned to the respective cluster center. After this a clustering metric is computed which is equal to the sum of distances of data points from their respective cluster centers. Fitness is defined as the inverse of this clustering metric. Thus the maximization of fitness function will lead to minimization of clustering metric. This is repeated for all the chromosomes present in the population. Mathematically, this can be represented as:
-
-<center><img src="/assets/g1.PNG" alt="label" style="width:200px;height:150px;"/></center>
+	+ In the second phase, the cluster centers encoded in the current chromosome are replaced by mean of the data points assigned to the respective cluster center. After this a clustering metric is computed which is equal to the sum of distances of data points from their respective cluster centers. Fitness is defined as the inverse of this clustering metric. Thus the maximization of fitness function will lead to minimization of clustering metric. This is repeated for all the chromosomes present in the population. 
 
 	+ dist dimension - n\_samples x n\_clusters
 
 	+ labels of best chromosome dimension - n\_samples x 1
 
 	+ fitness dimension - P x 1
+
+	+ Mathematically, this operation can be represented as:
+
+<center><img src="/assets/g1.PNG" alt="label" style="width:200px;height:150px;"/></center>
 
 * Selection
 
@@ -65,13 +67,14 @@ We will use Genetic Algorithm for clustering data. Several clusering techniques 
 
 * Mutation
 
-	+ Each chromosome undergoes mutation with a fixed probability mu<sub>m</sub>. In this a random number delta is generated in the range [0, 1] with uniform distribution and a gene is selected at random. If the value of gene is v, after mutation it becomes
+	+ Each chromosome undergoes mutation with a fixed probability mu<sub>m</sub>. In this a random number delta is generated in the range [0, 1] with uniform distribution and a gene is selected for mutation at random. 
+
+	+ Number of Mutations = mu<sub>m</sub> * Number of crossover children
+	
+	+ If the value of gene is v, after mutation it becomes
 
 <center><img src="/assets/g2.PNG" alt="label" style="width:200px;height:80px;"/></center>
 	
-	+ The '+' or '-' sign occurs with equal probability.
-
-	+ Number of Mutations = mu<sub>m</sub> * Number of crossover children
 
 * Termination
 
