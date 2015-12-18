@@ -80,11 +80,11 @@ We will use Genetic Algorithm for clustering data. Several clusering techniques 
 
 	+ Repeat Step 2 - Step 5 until one of the termination criteria has been met i.e. the difference between newly assigned labels and older labels is less than a particular tolerance value or until the maximum number of iterations have been reached.
 
-##Implementation
+## Implementation
 
 <script src="https://gist.github.com/IshankGulati/85e0051fb4c67e48c414.js"></script>
 
-##Results
+## Results
 
 <center><img src="/assets/genetic.PNG" alt="Lena Genetic" style="width:660px;height:670px;"/></center>
 
