@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Anisitropic (Perona-Malik) Diffusion"
+title: "Anisotropic (Perona-Malik) Diffusion"
 comments: True
 date:  2015-12-18
 tags: Image-Processing
