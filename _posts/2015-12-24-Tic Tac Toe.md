@@ -16,5 +16,8 @@ This is basically the same old school single player Tic Tac Toe game developed i
 
 I won't be embedding my code here as it is quite lengthy, you can refer my [repository](https://github.com/IshankGulati/Tic-Tac-Toe) for complete code.
 
+# Additional Dependencies
+
+Yeah, Python 2.7 and Pygame.
 
 Thanks!
