@@ -2,7 +2,7 @@
 layout: post
 title: "Motion Compensated Frame Interpolation"
 comments: True
-date:  2016-11-01
+date:  2016-01-10
 tags: Video-Processing
 ---
 
