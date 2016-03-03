@@ -45,20 +45,20 @@ A statistical method of examining texture that considers the spatial relationshi
 
 The statistical measures evaluated from the matrix and used as features are:
 
-+ Energy
+	+ Energy
 
-The Energy feature is calculated as:
+	The Energy feature is calculated as:
 
-<center><img src="/assets/energy.PNG" alt="energy" style="width:470px;height:120px;"/></center>
+	<center><img src="/assets/energy.PNG" alt="energy" style="width:470px;height:120px;"/></center>
 
-+ Entropy
+	+ Entropy
 
-The Entropy feature is calculated as:
+	The Entropy feature is calculated as:
 
-<center><img src="/assets/entropy.PNG" alt="entropy" style="width:260px;height:85px;"/></center>
+	<center><img src="/assets/entropy.PNG" alt="entropy" style="width:260px;height:85px;"/></center>
 
-Pi,j = Element i,j of the normalized symmetrical GLCM
-N = Number of gray levels in the image
+	Pi,j = Element i,j of the normalized symmetrical GLCM
+	N = Number of gray levels in the image
 
 * Homogeneity Parameter 
 
@@ -85,3 +85,14 @@ Max Iterations: 150
 
 Training Set accuracy: 97.381%
 Test Set accuracy: 85.25%
+
+## References
+
+* Mustafa M. Abd Zaid, Loay E. Gerorge, Ghadah Al-Khafaji. Distinguishing Cartoons Images from Real-Life Images (2015)
+* Yang Song, Ming Zhao, Jay Yagnik, and Xiaoyun Wu. Taxonomic Classification for Web-based Videos (2010)
+* Bogdan Ionescu and Patrick Lambert. Classification of animated video genre using color and temporal information (2010).
+* Ronald Glasberg, Sebastian Schmiedeke, Martin Mocigemba and Thomas Sikora.  Real-Time Approaches for Video-Genre-Classification using New High-Level Descriptors and a Set of Classifiers (2007).
+* Darin Brezeale and Diane J. Cook. Automatic Video Classification: A Survey of the Literature (2007).
+* Tian-Tsong Ng and Shih-Fu Chang. An Online System for classifying Computer Graphics Images from Natural Photographs (2007).
+* Tzvetanka Ianeva. Detecting Cartoons: a Case Study in Automatic Video-Genre Classification(2003)
+* M.J. Roach, J.S.D. Mason. Video genre classification using dynamics (2002)
