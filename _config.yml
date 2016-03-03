@@ -1,6 +1,6 @@
 # Dependencies
-markdown:            redcarpet
-redcarpet:
+markdown:            kramdown
+kramdown:
   extensions:     [strikethrough,smart,with_toc_data,tables]
 highlighter:         pygments
 # Permalinks

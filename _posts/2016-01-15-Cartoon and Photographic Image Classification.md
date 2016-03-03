@@ -2,7 +2,7 @@
 layout: post
 title: "Cartoon and Photographic image classification"
 comments: True
-date:  2015-11-01
+date:  2016-11-11
 tags: Image-Processing Machine-Learning
 ---
 
