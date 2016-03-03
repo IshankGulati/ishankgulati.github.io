@@ -8,7 +8,7 @@ tags: Video-Processing
 
 This was my first project as a part of my internship @Interra Systems, Noida from 1st June – 15th July 2015 under the guidance of Mr. Shekhar and Mr. Rishi Gupta.
 
-Introduction:
+## Introduction
 
 As the technology of display devices is developed, various high-performance display devices have become available to users in the market. While several current video coding and transmission specifications have been defined for relatively old devices having HD spatial resolution and a temporal rate of 30 fps, spatial and temporal resolutions of many commercial display devices have become higher. Furthermore, they have the functionality to enhance spatial and temporal resolution during post-processing. Frame rate up-conversion (FRU) methods are suited for the post-processing of display devices for high perceptual quality, as FRU algorithms can enhance temporal quality without increasing the bitrates. Up-conversion methods in a temporal axis can be used to produce an inter-frame in between two consecutive frames at a decoder side without any direct information for generation of the inter frame from an encoder.
 
@@ -19,22 +19,22 @@ In this project, I implemented a motion-compensated (MC) interpolation algorithm
 
 ## Results
 
-<center><img src="/assets/t-1Frame.jpg" alt="floor" style="width:640px;height:400px;"/></center>
+<center><img src="/assets/t-1Frame.jpg" alt="t-1frame" style="width:640px;height:400px;"/></center>
 <center><sub>t-1 frame</sub></center><br>
 
-<center><img src="/assets/tFrame.jpg" alt="floor" style="width:640px;height:400px;"/></center>
+<center><img src="/assets/tFrame.jpg" alt="tframe" style="width:640px;height:400px;"/></center>
 <center><sub>t Frame</sub></center><br>
 
-<center><img src="/assets/forawrd.jpg" alt="floor" style="width:640px;height:400px;"/></center>
+<center><img src="/assets/forward.jpg" alt="forward" style="width:640px;height:400px;"/></center>
 <center><sub>Only forward estimation</sub></center><br>
 
-<center><img src="/assets/backward.jpg" alt="floor" style="width:640px;height:400px;"/></center>
+<center><img src="/assets/backward.jpg" alt="backward" style="width:640px;height:400px;"/></center>
 <center><sub>Only backward estimation</sub></center><br>
 
-<center><img src="/assets/bidirectional.jpg" alt="floor" style="width:640px;height:400px;"/></center>
+<center><img src="/assets/bidirectional.jpg" alt="bidirectional" style="width:640px;height:400px;"/></center>
 <center><sub>Bidirectional estimation</sub></center><br>
 
-<center><img src="/assets/obmc.jpg" alt="floor" style="width:640px;height:400px;"/></center>
+<center><img src="/assets/obmc.jpg" alt="obmc" style="width:640px;height:400px;"/></center>
 <center><sub>OBMC + Spatialy interpolated frame</sub></center><br>
 
 ## References
